@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Notification Popup</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    .notification {
+      display: none;
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #333;
+      color: #fff;
+      padding: 16px 24px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      animation: fadeInOut 4s ease-in-out;
+      z-index: 1000;
+    }
+
+    @keyframes fadeInOut {
+      0% { opacity: 0; transform: translateY(20px); }
+      10% { opacity: 1; transform: translateY(0); }
+      90% { opacity: 1; transform: translateY(0); }
+      100% { opacity: 0; transform: translateY(20px); }
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Notification Popup Example</h2>
+  <button onclick="showNotification()">Show Notification</button>
+
+  <div id="popup" class="notification">
+    🚀 This is a notification popup!
+  </div>
+
+  <script>
+    function showNotification() {
+      const popup = document.getElementById("popup");
+      popup.style.display = "block";
+
+      // Hide after animation ends (4s)
+      setTimeout(() => {
+        popup.style.display = "none";
+      }, 4000);
+    }
+  </script>
+
+</body>
+</html>

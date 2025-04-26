@@ -1,0 +1,50 @@
+<head>
+    <title>FaceBook Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Create Account</h2>
+        <form id="registrationForm">
+        <div class="form-group">
+            <label>First Name</label>
+            <input type="text" id="firstName"/>
+            <div class="error" id="firstNameError"></div>
+        </div>
+
+        <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" id="lastName" />
+            <div class="error" id="lastNameError"></div>
+        </div>
+
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" id = "email" />
+            <div class="error" id="emailError"></div>
+        </div>
+
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" id="password" />
+            <div class="error" id="passwordError"></div>
+        </div>
+    
+        <div class="form-group">
+            <label>Date of Birth</label>
+            <input type="date" id="dob">
+            <div class="error" id="dobError"></div>
+        </div>
+
+        <div class="form-group gender">
+            <label><input type="radio" name="gender" value="Male" /> Male</label>
+            <label><input type="radio" name="gender" value="Female" /> Female</label>
+          </div>
+          <div class="error" id="genderError"></div>
+
+        <button type="submit">Sign Up</button>
+    </form>
+    </div>
+    <script src="script.js"></script>
+</body>

@@ -1,0 +1,33 @@
+<head>
+    <title>Fibonacci Series</title>
+</head>
+<body>
+  <h2>Fibonacci Series Generator</h2>
+  <label for="count">Enter number of terms:</label>
+  <input type="number" id="count" min="1">
+  <button onclick="generateFibonacci()">Generate</button>
+
+  <p id="result"></p>
+
+  <script>
+    function generateFibonacci() {
+      const count = parseInt(document.getElementById("count").value);
+      
+      if (isNaN(count) || count < 1) {
+        alert("Please enter a number greater than or equal to 1.");
+        return;
+      }
+      
+      let fib = [];
+
+      if (count >= 1) fib.push(0);
+      if (count >= 2) fib.push(1);
+
+      for (let i = 2; i < count; i++) {
+        fib.push(fib[i - 1] + fib[i - 2]);
+      }
+
+      document.getElementById("result").innerText = "Fibonacci Series: " + fib.join(", ");
+    }
+  </script>
+</body>

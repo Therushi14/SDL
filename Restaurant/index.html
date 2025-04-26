@@ -1,0 +1,39 @@
+<head>
+  <title>Restaurant Data Entry Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h2>Restaurant Data Entry</h2>
+  <form id="restaurantForm">
+    <table>
+      <tr>
+        <td>Restaurant Name:</td>
+        <td><input type="text" id="name" required></td>
+      </tr>
+      <tr>
+        <td>Location:</td>
+        <td><input type="text" id="location" required></td>
+      </tr>
+      <tr>
+        <td>Cuisine Type:</td>
+        <td><input type="text" id="cuisine" required></td>
+      </tr>
+      <tr>
+        <td>Rating (out of 5):</td>
+        <td><input type="number" id="rating" step="0.1" min="0" max="5" required></td>
+      </tr>
+      <tr>
+        <td>Open 24/7:</td>
+        <td><input type="checkbox" id="open24"></td>
+      </tr>
+      <tr>
+        <td colspan="2" style="text-align:center;">
+          <button type="submit">Submit</button>
+        </td>
+      </tr>
+    </table>
+  </form>
+
+  <script src="script.js"></script>
+</body>

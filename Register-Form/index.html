@@ -1,0 +1,33 @@
+<head>
+  <title>Simple Registration Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h2>Registration Form</h2>
+
+  <form id="registrationForm">
+    <label for="firstname">First Name *</label>
+    <input type="text" id="firstname" name="firstname">
+
+    <label for="lastname">Last Name *</label>
+    <input type="text" id="lastname" name="lastname">
+
+    <label for="organization">Organization</label>
+    <input type="text" id="organization" name="organization">
+
+    <label>Hobbies</label>
+    <input type="checkbox" name="hobbies" value="Reading"> Reading
+    <input type="checkbox" name="hobbies" value="Music"> Music
+    <input type="checkbox" name="hobbies" value="Gaming"> Gaming
+    <input type="checkbox" name="hobbies" value="Traveling"> Traveling
+
+    <br><br>
+    <button type="submit">Submit</button>
+    <p class="error" id="errorMsg"></p>
+  </form>
+
+  <div class="output" id="output"></div>
+
+  <script src="script.js"></script>
+</body>
